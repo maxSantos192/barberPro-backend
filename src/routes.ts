@@ -18,7 +18,7 @@ import { isAuthenticated } from "./middlewares/isAuthenticated"
 
 const router = Router()
 
-// --- ROTAS USER --- //
+// --- ROUTER USER --- //
 router.post('/users', new CreateUserController().handle)
 router.post('/session', new AuthUserController().handle)
 
@@ -26,7 +26,7 @@ router.get('/me', isAuthenticated, new DetailUserController().handle)
 
 router.put("/users", isAuthenticated, new UpdateUserController().handle)
 
-// --- ROTAS HAIRCUT --- //
+// --- ROUTER HAIRCUT --- //
 router.post('/haircut', isAuthenticated, new CreateHaircutController().handle)
 
 router.get('/haircuts', isAuthenticated, new ListHaircutController().handle)
@@ -36,7 +36,7 @@ router.get('/haircut/detail', isAuthenticated, new DetailHaircutController().han
 
 router.put('/haircut', isAuthenticated, new UpdateHaircutController().handle)
 
-// --- ROTAS SCHEDULE --- //
+// --- ROUTER SCHEDULE --- //
 router.post('/schedule', isAuthenticated, new NewScheduleController().handle)
 
 router.get('/schedule', isAuthenticated, new ListScheduleController().handle)
