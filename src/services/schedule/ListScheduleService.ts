@@ -13,7 +13,7 @@ class ListScheduleService {
             select: {
                 id: true,
                 customer: true,
-                haircut_id: true,
+                haircut: true,
             }
         })
         return schedule
